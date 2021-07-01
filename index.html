@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>
+			JSON Viewer
+		</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="./node_modules/jquery.json-viewer/json-viewer/jquery.json-viewer.js"></script> 
+		<script src="./json.js"></script> 
+  		<link href="./node_modules/jquery.json-viewer/json-viewer/jquery.json-viewer.css" type="text/css" rel="stylesheet">
+  		<link href="./style.css" type="text/css" rel="stylesheet">
+  		
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark pl-15">
+		  <a class="navbar-brand" style="font-weight: bold;">JSON Viewer</a>
+		</nav>
+		<div class="menu-background" style="padding-left: 30px;">
+			<table>
+				<tr>
+					<td>
+						<a onclick="jsonView()" class="font-14 j-btn">Format</a>
+					</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>
+						<a class="font-14 j-btn" onclick="onclear()">Clear</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="d-flex" style="margin-right: 0;margin-left: 0;">
+			<div class="p-2 flex-fill">
+				<textarea id="json-input" style="height: calc(90vh - 25px);width: 100%; font-family: monospace;" autocomplete="off" id="edit" name="edit" class=" x-form-textarea x-form-field "></textarea>
+			</div>
+			<div class="p-2 flex-fill" style="">
+				<pre style="height: calc(90vh - 25px);overflow:auto;border: 1px solid lightgray;" id="json-renderer"></pre>
+			</div>
+		</div>
+	</body>
+</html>
